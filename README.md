@@ -1,12 +1,9 @@
-# DockerSpawner
+# SagaSpawner
 
 Enables [JupyterHub](https://github.com/jupyter/jupyterhub) to spawn
-user servers in docker containers.
+user servers a supercomputer computing nodes via PBS or similar queue systems using [SAGA](https://github.com/radical-cybertools/saga-python)
 
-There is a complete example in [examples/oauth](examples/oauth) for
-using GitHub OAuth to authenticate users, and spawn containers with docker.
-
-## setup
+## Setup
 
 Install dependencies:
 
@@ -14,12 +11,4 @@ Install dependencies:
 
 Tell JupyterHub to use DockerSpawner, by adding the following to your `jupyter_hub_config.py`:
 
-    c.JupyterHubApp.spawner_class='dockerspawner.DockerSpawner'
-
-
-## build
-
-Build the container with:
-
-    docker build -t jupyter/singleuser singleuser
-
+    c.JupyterHubApp.spawner_class='sagaspawner.SagaSpawner'
