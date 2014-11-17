@@ -1,6 +1,6 @@
-"""dockerspawner version info"""
+"""sagaspawner version info"""
 
-# Copyright (c) Jupyter Development Team.
+# Copyright (c) Andrea Zonca
 # Distributed under the terms of the Modified BSD License.
 
 version_info = (

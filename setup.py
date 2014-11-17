@@ -12,12 +12,6 @@ from __future__ import print_function
 import os
 import sys
 
-v = sys.version_info
-if v[:2] < (3,3):
-    error = "ERROR: Jupyter Hub requires Python version 3.3 or above."
-    print(error, file=sys.stderr)
-    sys.exit(1)
-
 
 if os.name in ('nt', 'dos'):
     error = "ERROR: Windows is not supported"
@@ -37,13 +31,13 @@ with open(pjoin(here, 'version.py')) as f:
 
 
 setup_args = dict(
-    name                = 'dockerspawner',
-    py_modules          = ['dockerspawner'],
+    name                = 'sagaspawner',
+    py_modules          = ['sagaspawner'],
     version             = version_ns['__version__'],
-    description         = """Dockerspawner: A custom spawner for Jupyterhub.""",
+    description         = """SagaSpawner: An HPC queue spawner for Jupyterhub.""",
     long_description    = "",
-    author              = "Jupyter Development Team",
-    author_email        = "ipython-dev@scipy.org",
+    author              = "Andrea Zonca",
+    author_email        = "code@andreazonca.com",
     url                 = "http://jupyter.org",
     license             = "BSD",
     platforms           = "Linux, Mac OS X",
